@@ -8,7 +8,7 @@ auth_token = 'your_auth_token'
 # Initialize Twilio Client
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-# Create a new app for the account with the give sid
+# Create a new app for the account with the given sid
 app = @client.api.v2010.accounts(account_sid).applications.create(
   friendly_name: 'Phone Me',
   voice_url: 'http://demo.twilio.com/docs/voice.xml',
